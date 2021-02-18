@@ -100,9 +100,44 @@
     margin-bottom: 1.25rem;
 }
 
-.right-sidevar .instructions-container p {
+.right-sidevar #instructions {
+    height: auto;
     text-align: justify;
     line-height: 1.5;
+    overflow: hidden;
+    transition: max-height 250ms ease;
+}
+
+.right-sidevar #instructions.long {
+    max-height: 450px;
+}
+
+.right-sidevar #read-more-less {
+    margin: auto;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    display: none;
+    position: relative;
+}
+
+.right-sidevar #read-more-less.show {
+    display: block;
+}
+
+.right-sidevar #read-more-less::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #c59d5f;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -1.5px;
+    transition: all 250ms ease;
+}
+
+.right-sidevar #read-more-less:hover::after {
+    width: 100%;
 }
 
 .ingredients-container #ingredients {
