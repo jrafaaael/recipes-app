@@ -45,8 +45,9 @@
 }
 
 .left-sidevar .img-container {
+    width: fit-content;
+    margin: auto;
     position: relative;
-    cursor: pointer;
 }
 
 .left-sidevar svg {
@@ -76,6 +77,7 @@
     max-width: 450px;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
 
 .left-sidevar .meal-information-container {
@@ -106,6 +108,7 @@
     line-height: 1.5;
     overflow: hidden;
     transition: max-height 250ms ease;
+    white-space: pre-line;
 }
 
 .right-sidevar #instructions.long {
