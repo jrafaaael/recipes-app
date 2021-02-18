@@ -1,0 +1,54 @@
+@media all and (min-width: 400px) {
+    .ingredients-container #ingredients {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media all and (min-width: 600px) {
+    main {
+        width: 85%;
+        max-width: 900px;
+        padding: 2rem 0;
+        margin: auto;
+    }
+
+    #meal-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 1rem 2rem;
+        place-items: center;
+    }
+
+    .left-sidevar {
+        align-self: start;
+    }
+
+    .left-sidevar .liked-info::before {
+        background-image: url(../images/mouse.svg);
+        transform: none;
+    }
+
+    .left-sidevar img {
+        max-width: 500px;
+    }
+
+    .left-sidevar .meal-information-container {
+        flex-direction: column;
+    }
+
+    .right-sidevar {
+        margin: 0;
+    }
+
+    .ingredients-container #ingredients {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: .45rem 2rem;
+    }
+
+    .iframe-video {
+        width: 100%;
+        grid-column: 1/-1;
+    }
+}

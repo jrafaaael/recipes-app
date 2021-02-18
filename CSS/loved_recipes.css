@@ -1,0 +1,39 @@
+.loved-recipes {
+    width: 100%;
+    max-width: 400px;
+}
+
+#recipes {
+    max-height: 300px;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-gap: 0.45rem 0;
+    overflow-y: auto;
+}
+
+#recipes li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+#recipes li.removed {
+    transform: translateX(-30%);
+    opacity: 0.25;
+}
+
+#recipes li:hover {
+    background-color: rgba(255, 159, 124, 0.5);
+    border-radius: 10px;
+}
+
+#recipes svg {
+    width: 20px;
+}
+
+#recipes li button:hover svg {
+    fill: rgb(255, 90, 90);
+}

@@ -1,0 +1,142 @@
+#meal-info {
+    margin: 1.5rem 0;
+}
+
+#meal-info .title {
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+/* Left sidevar */
+.left-sidevar .meal-name-container {
+    margin-bottom: 0.75rem;
+}
+
+.left-sidevar .liked-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-sidevar .liked-info::before,
+.left-sidevar .liked-info::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.left-sidevar .liked-info::before {
+    margin-right: 0.25rem;
+    background-image: url(../images/tap.svg);
+    transform: rotate(-15deg);
+}
+
+.left-sidevar .liked-info::after {
+    margin-left: 0.25rem;
+    background-image: url(../images/heart-solid.svg);
+}
+
+.left-sidevar .liked-info h6 {
+    font-size: .85rem;
+    font-weight: normal;
+}
+
+.left-sidevar .img-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.left-sidevar svg {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 250ms ease;
+}
+
+.left-sidevar #meal-img + svg path {
+    transition: all 350ms ease 350ms;
+}
+
+.left-sidevar #meal-img.liked + svg {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.left-sidevar #meal-img.liked + svg path {
+    fill: rgb(255, 90, 90);
+}
+
+.left-sidevar #meal-img {
+    width: 100%;
+    max-width: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.left-sidevar .meal-information-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-information-container p {
+    font-weight: 900;
+}
+
+.meal-information-container p span {
+    font-weight: 400;
+}
+
+/* right sidevar */
+.right-sidevar {
+    margin-top: 1.25rem;
+}
+
+.right-sidevar .instructions-container {
+    margin-bottom: 1.25rem;
+}
+
+.right-sidevar .instructions-container p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.ingredients-container #ingredients {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 0.45rem 0;
+}
+
+#ingredients li {
+    width: fit-content;
+    text-transform: capitalize;
+    list-style-position: inside;
+}
+
+/* Iframe */
+.iframe-video {
+    margin-top: 1.25rem;
+}
+
+/* https://www.benmarshall.me/responsive-iframes/ */
+.iframe-container {
+    overflow: hidden;
+    /* 16:9 aspect ratio */
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
